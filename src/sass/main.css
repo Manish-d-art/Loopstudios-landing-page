@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  min-height: 100vh;
+  position: relative;
+  font-family: "Alata", sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.header .header__hero {
+  width: 100%;
+}
+.header .header__logo-container {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: 1fr;
+}
+.header .header__navbar {
+  padding-block: 6vh;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+.header .header__navbar .header__logo {
+  padding-inline: 5vw;
+  width: 200px;
+}
+.header .header__navbar .header__menu {
+  color: white;
+  padding-inline: 5vw;
+  text-align: end;
+}
+.header .header__navbar ul {
+  list-style-type: none;
+}
+.header .header__navbar ul .header__nav-link-container {
+  position: absolute;
+  z-index: -1;
+  -webkit-padding-before: 30vh;
+          padding-block-start: 30vh;
+  background-color: hsl(0, 0%, 0%);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  padding-inline: 5vw;
+}
+.header .header__navbar ul a {
+  text-decoration: none;
+  color: hsl(0, 0%, 55%);
+  text-transform: uppercase;
+  line-height: 2.5;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */

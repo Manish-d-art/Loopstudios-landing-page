@@ -9,6 +9,7 @@
   <title>Frontend Mentor | Loopstudios landing page</title>
 
   <script type="module" src="/src/js/controller.js"></script>
+  <link rel="stylesheet" href="/src/sass/main.scss">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -16,13 +17,48 @@
   </style>
 </head>
 <body>
-  About
-  Careers
-  Events
-  Products
-  Support
+  <header class="header">
+    <nav class="header__navbar">
+      <ul class="header__navbar-container">
+        <li class="header__logo-container"> 
+          <img class="header__logo" src="/src/assets/images/logo.svg">
+        </li>
+        <li class="header__menu">
+          <div class="header__toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </li>
+        <li>
+          <ul class="header__nav-link-container">
+            <li class="header__nav-items">
+              <a href="#about">About</a>
+            </li>
+            <li class="header__nav-items">
+              <a href="#Careers">Careers</a>
+            </li>
+            <li class="header__nav-items">
+              <a href="#Events">Events</a>
+            </li>
+            <li class="header__nav-items">
+              <a href="#Products">Products</a>
+            </li>
+            <li class="header__nav-items">
+              <a href="#Support">Support</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+    </nav>
 
-  Immersive experiences that deliver
+    <div class="header__title-container">
+      <h1>Immersive experiences that deliver</h1>
+    </div>
+  </header>
+  <!-- 
+  
 
   The leader in interactive VR
 
@@ -50,11 +86,11 @@
   Products
   Support
 
-  © 2021 Loopstudios. All rights reserved.
+  © 2021 Loopstudios. All rights reserved. -->
 
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
