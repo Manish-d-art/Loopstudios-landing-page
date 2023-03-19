@@ -9,7 +9,7 @@
         display: grid;
         grid-template-columns: 1.5fr 1fr;
         align-items: end;
-        padding-block: 11vw 11vw;
+        padding-block: 11vw 1vw;
 
     }
     img {
@@ -17,7 +17,7 @@
     }
 }
 
-.main__section1__texts {
+.main__section1-texts {
     padding-inline: clamp(1rem, 5vw, 3rem);
     text-align: center;
     @media (min-width: 992px) {
@@ -39,9 +39,9 @@
         color: var.$Black;
         font-family: 'Josefin Sans', sans-serif;
         margin-block: 1.5rem;
+        font-size: 2rem;
         @include mixin.heading();
         @media (min-width: 992px) {
-            // font-size: 1.2rem;
             font-size: clamp(2rem, 3vw, 2.8rem);
         }
     }
@@ -51,6 +51,79 @@
         font-family: 'Alata', sans-serif;
         @media (min-width: 992px) {
             font-size: .87rem;
+        }
+    }
+}
+
+.main__section2-creations {
+    padding: 5vw;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    @media (min-width: 580px) {
+        padding: 8vw;
+    }
+    .main__section2__heading {
+        margin-block: 10vh 8vh;
+        @include mixin.heading();
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .main__section__creations {
+        display: grid;
+        grid-row-gap: 5vw;
+        grid-column-gap: 5vw;
+        justify-content: center;
+        align-items: center;
+        @media (min-width: 580px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (min-width: 800px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media (min-width: 1110px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        div {
+            position: relative;
+            img, picture {
+                width: 100%;
+                display: block;
+            }
+            h3 {
+                position: absolute;
+                z-index: 2;
+                color: var.$White;
+                font-size: 1.5rem;
+                @include mixin.heading();
+                width: 138px;
+                bottom: 16px;
+                left: 20px;
+                @media (min-width: 580px) {
+                    bottom: 40px;
+                    left: 40px;
+                }
+            }
+        }
+       
+        
+    }
+    a {
+        border: 3px solid #000;
+        padding-block: 1rem;
+        padding-inline: 3rem;
+        text-decoration: none;
+        margin-block-start: 3rem;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: var.$Black;
+        font-family: 'Alata', sans-serif;
+        &:hover {
+            background-color: var.$Black;
+            color: var.$White;
+            transition: all .3s ease-in-out;
         }
     }
 }

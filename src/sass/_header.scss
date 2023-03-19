@@ -211,6 +211,7 @@
         letter-spacing: 5px;
         color: var.$White;
         @include mixin.heading();
+        font-size: clamp(1.3rem, 8vw, 2.5rem);
         @media (max-width:300px) {
             font-size: clamp(1.2rem, 0.2rem + 0.008vw, 1.8rem);
         }
