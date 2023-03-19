@@ -1,4 +1,5 @@
 @use 'variables' as var;
+@use 'mixins' as mixin;
 
 .header {
     min-height: 100vh;
@@ -6,13 +7,14 @@
     font-family: 'Alata', sans-serif;
     letter-spacing: 2px;
     font-size: 1.3rem;
-    @media (max-width: 768px) {
+    overflow: hidden;
+    @media (max-width: 992px) {
         display: grid;
         justify-content: center;
     }
     background: url('/src/assets/images/mobile/image-hero.jpg') top left/ cover no-repeat;
-    @media (min-width: 768px) {
-        background: url('/src/assets/images/desktop/image-hero.jpg') top left/ contain no-repeat;
+    @media (min-width: 992px) {
+        background: url('/src/assets/images/desktop/image-hero.jpg') center/ cover no-repeat;
     }
 }
 
@@ -21,7 +23,7 @@
     grid-template-rows: 1fr;
     grid-template-columns: 50vw 50vw;
 
-    @media (min-width:768px) {
+    @media (min-width: 992px) {
         grid-template-columns: 30vw 50vw;
     }
 
@@ -38,7 +40,7 @@
     justify-content: end;
     display: grid;
 
-    @media (min-width:768px) {
+    @media (min-width: 992px) {
         display: none;
         color: var.$White;
     }
@@ -56,7 +58,7 @@
         cursor: pointer;
         overflow: hidden;
         -webkit-tap-highlight-color: transparent;
-        @media (min-width:768px) {
+        @media (min-width: 992px) {
             display: none;
         }
 
@@ -107,7 +109,7 @@
     z-index: 1;
     top: 0;
     width: 100%;
-    @media (min-width:768px) {
+    @media (min-width: 992px) {
         padding-block: 3rem;
         padding-inline: 10vw;
     }
@@ -115,7 +117,7 @@
     .header__logo {
         margin-inline: 5vw;
         width: min(70%, 150px);
-        @media (min-width: 768px) {
+        @media (min-width: 992px) {
             margin-inline: 0;
         }
     }
@@ -133,7 +135,7 @@
             top: -100vh;
             transition: 1s;
             padding-inline: 5vw;
-            @media (min-width: 768px) {
+            @media (min-width: 992px) {
                 all: unset;
                 display: grid;
                 grid-template-columns:repeat(5, 80px);
@@ -142,7 +144,7 @@
             }
 
             .header__nav-items {
-                @media (min-width: 768px) {
+                @media (min-width: 992px) {
                     text-align: center;
                 }
             }
@@ -171,7 +173,7 @@
                 transition: all 0.3s linear;
             }
           
-            @media (min-width: 768px) {
+            @media (min-width: 992px) {
                 color: var.$White;
                 text-transform: capitalize;
                 position: relative;
@@ -198,7 +200,7 @@
     padding-inline:  4vw 6vw;
     display: flex;
     align-items: center;
-    @media (min-width:768px) {
+    @media (min-width: 992px) {
         top: clamp(16vh, 17vw, 28vh);
         margin-inline-start: 10vw;
         width: 46vw;
@@ -207,16 +209,12 @@
     }
     h1 {
         letter-spacing: 5px;
-        text-transform: uppercase;
-        font-weight: 500;
         color: var.$White;
-        font-size: clamp(1.3rem, 9vw, 2.5rem);
-        font-family: 'Josefin Sans', sans-serif;
-        line-height: 1.2;
+        @include mixin.heading();
         @media (max-width:300px) {
             font-size: clamp(1.2rem, 0.2rem + 0.008vw, 1.8rem);
         }
-        @media (min-width: 768px) {
+        @media (min-width: 992px) {
             font-size: clamp(2rem, 4vw, 6rem);
             font-weight: 500;
             padding-block: 1vw;

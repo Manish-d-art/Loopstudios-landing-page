@@ -1,0 +1,56 @@
+@use 'variables' as var;
+@use 'mixins' as mixin;
+
+.main__section1 {
+    padding-block: 6rem 2rem;
+    padding-inline: 6vw;
+    @media (min-width: 992px) {
+        padding-inline: 11vw;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        align-items: end;
+        padding-block: 11vw 11vw;
+
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.main__section1__texts {
+    padding-inline: clamp(1rem, 5vw, 3rem);
+    text-align: center;
+    @media (min-width: 992px) {
+        padding-inline: clamp(1.5rem, 3vw, 8rem) 0;
+        text-align: start;
+        width: max(400px, 100%);
+    }
+    @media (min-width: 992px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        position: relative;
+        right: 120px;
+        background: white;
+        height: clamp(213px, 22vw, 304px);
+    }
+    .main__section1__heading {
+        letter-spacing: 1px;
+        color: var.$Black;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-block: 1.5rem;
+        @include mixin.heading();
+        @media (min-width: 992px) {
+            // font-size: 1.2rem;
+            font-size: clamp(2rem, 3vw, 2.8rem);
+        }
+    }
+
+    .main__section1__para {
+        color:var.$Dark-Gray;
+        font-family: 'Alata', sans-serif;
+        @media (min-width: 992px) {
+            font-size: .87rem;
+        }
+    }
+}

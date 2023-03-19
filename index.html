@@ -9,7 +9,7 @@
   <title>Frontend Mentor | Loopstudios landing page</title>
 
   <script type="module" src="/src/js/controller.js"></script>
-  <link rel="stylesheet" href="/src/sass/main.scss">
+  <link rel="stylesheet" href="/src/sass/index.scss">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -50,22 +50,36 @@
           </ul>
         </li>
       </ul>
-      
     </nav>
-
     <div class="header__title-container">
       <h1>Immersive experiences that deliver</h1>
     </div>
   </header>
+
+  <main>
+    <section class="main__section1">
+      <picture>
+        <source media="(min-width: 768px)" srcset="/src/assets/images/desktop/image-interactive.jpg">
+        <img class="main__interactive-img" src="/src/assets/images/mobile/image-interactive.jpg" alt="interactive-image">
+      </picture>
+      <div class="main__section1__texts">
+        <h2 class="main__section1__heading">The leader in interactive VR</h2>
+        <p class="main__section1__para">
+          Founded in 2011, Loopstudios has been producing world-class virtual reality 
+          projects for some of the best companies around the globe. Our award-winning 
+          creations have transformed businesses through digital experiences that bind 
+          to their brand.
+        </p>
+      </div>
+     
+    </section>
+  </main>
   <!-- 
   
 
-  The leader in interactive VR
+  
 
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
+  
 
   Our creations
 
