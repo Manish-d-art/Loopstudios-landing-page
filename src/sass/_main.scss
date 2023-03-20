@@ -56,14 +56,13 @@
 }
 
 .main__section2-creations {
-    padding: 5vw;
-    // display: grid;
-    // grid-template-rows: 1fr 1fr 1fr;
-    // justify-items: center;
+    padding-block: 5vw 21vw;
+    padding-inline: 5vw;
     @media (min-width: 632px) {
-        padding: 8vw;
+        padding-block: 8vw 14vw;
+        padding-inline: 8vw;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.5fr 1fr;
         grid-template-rows: 300px;
     }
     .main__section2__heading {

@@ -1,0 +1,67 @@
+@use 'variables' as var;
+
+footer {
+    background-color: var.$Black;
+    font-family: 'Alata', sans-serif;
+    padding-block: 5rem;
+    padding-inline: 2rem;
+    .footer__nav-container {
+        display: grid;
+        justify-content: center;
+    }
+    .footer__info-container {
+        .footer__info {
+            .footer__contacts-container {
+                display: grid;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.footer__navbar {
+    list-style-type: none;
+    .footer__logo-container {
+        .footer__nav-logo {
+            width: 200px;
+            margin-block-end: 1.5rem;
+        }
+    }
+}
+
+.footer__navbar {
+    .footer__navlink-container {
+        .footer__nav-links {
+            .footer__nav-link {
+                font-size: 1rem;
+                list-style-type: none;
+                text-align: center;
+                line-height: 2.5;
+                a {
+                    text-decoration: none;
+                    color: var.$White;
+                    &:active {
+                        color: var.$Dark-Gray;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer__info-container {
+    .footer__socials {
+        display: grid;
+        grid-template-columns: repeat(4, 43px);
+        margin-block: 3rem 1.5rem;
+    }
+}
+
+.footer__info-container {
+    .footer__copyrights {
+        color: var.$Dark-Gray;
+        list-style-type: none;
+        font-size: 1rem;
+        text-align: center;
+    }
+}
