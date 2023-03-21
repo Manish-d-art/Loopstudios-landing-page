@@ -5,15 +5,15 @@
     min-height: 100vh;
     position: relative;
     font-family: 'Alata', sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     font-size: 1.3rem;
     overflow: hidden;
-    @media (max-width: 992px) {
+    @media (max-width: 62rem) {
         display: grid;
         justify-content: center;
     }
     background: url('/src/assets/images/mobile/image-hero.jpg') top left/ cover no-repeat;
-    @media (min-width: 992px) {
+    @media (min-width: 62rem) {
         background: url('/src/assets/images/desktop/image-hero.jpg') center/ cover no-repeat;
     }
 }
@@ -23,7 +23,7 @@
     grid-template-rows: 1fr;
     grid-template-columns: 50vw 50vw;
 
-    @media (min-width: 992px) {
+    @media (min-width: 62rem) {
         grid-template-columns: 30vw 50vw;
     }
     .header__logo-container {
@@ -39,63 +39,63 @@
     justify-content: end;
     display: grid;
 
-    @media (min-width: 992px) {
+    @media (min-width: 62rem) {
         display: none;
         color: var.$White;
     }
    
     .header__toggle {
         position: relative;
-        width: 59px;
-        height: 47px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-        border-radius: 10px;
+        width: 3.6875rem;
+        height: 2.9375rem;
+        box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.08);
+        border-radius: 0.625rem;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
         overflow: hidden;
         -webkit-tap-highlight-color: transparent;
-        @media (min-width: 992px) {
+        @media (min-width: 62rem) {
             display: none;
         }
 
         span {
             position: absolute;
-            width: 35px;
-            height: 4px;
+            width: 2.1875rem;
+            height: 0.25rem;
             background: var.$White;
-            border-radius: 4px;
+            border-radius: 0.25rem;
             transition: all .5s;
             position: absolute;
         }
 
         span:nth-child(1) {
-            width: 19px;
-            left: 12px;
-            transform: translateY(-12px);
+            width: 1.1875rem;
+            left: 0.75rem;
+            transform: translateY(-0.75rem);
         }
         
         span:nth-child(2) {
-            width: 11px;
-            left: 12px;
-            transform: translateY(12px);
+            width: 0.6875rem;
+            left: 0.75rem;
+            transform: translateY(0.75rem);
         }
     }
 
     .header__toggle--active {
         span:nth-child(1) {
-            width: 40px;
-            transform: translateY(0px) rotate(45deg);
+            width: 2.5rem;
+            transform: translateY(0rem) rotate(45deg);
             transition-delay: .125s;
         }
         span:nth-child(2) {
-            transform: translateY(0px) rotate(315deg);
-            width: 40px;
+            transform: translateY(0rem) rotate(315deg);
+            width: 2.5rem;
             transition-delay: .25s;
         }
         span:nth-child(3) {
-            transform: translateX(60px);
+            transform: translateX(3.75rem);
         }
     }
 }
@@ -106,15 +106,15 @@
     z-index: 1;
     top: 0;
     width: 100%;
-    @media (min-width: 992px) {
+    @media (min-width: 62rem) {
         padding-block: 3rem;
         padding-inline: 10vw;
     }
 
     .header__logo {
         margin-inline: 5vw;
-        width: min(70%, 150px);
-        @media (min-width: 992px) {
+        width: min(70%, 9.375rem);
+        @media (min-width: 62rem) {
             margin-inline: 0;
         }
     }
@@ -132,16 +132,16 @@
             top: -100vh;
             transition: 1s;
             padding-inline: 5vw;
-            @media (min-width: 992px) {
+            @media (min-width: 62rem) {
                 all: unset;
                 display: grid;
-                grid-template-columns:repeat(5, 80px);
+                grid-template-columns:repeat(5, 5rem);
                 justify-content: end;
                 font-size: .7rem;
             }
 
             .header__nav-items {
-                @media (min-width: 992px) {
+                @media (min-width: 62rem) {
                     text-align: center;
                 }
             }
@@ -171,15 +171,15 @@
 
 
 .header__title-container {
-    width: min(87vw, 456px);
+    width: min(87vw, 28.5rem);
     height: 13rem;
-    border: 3px solid var.$White;
+    border: 0.1875rem solid var.$White;
     top: 40vh;
     position: relative;
     padding-inline:  4vw 6vw;
     display: flex;
     align-items: center;
-    @media (min-width: 992px) {
+    @media (min-width: 62rem) {
         top: clamp(16vh, 17vw, 28vh);
         margin-inline-start: 10vw;
         width: 46vw;
@@ -187,14 +187,14 @@
         height: fit-content;
     }
     h1 {
-        letter-spacing: 5px;
+        letter-spacing: 0.3125rem;
         color: var.$White;
         @include mixin.heading();
         font-size: clamp(1.3rem, 8vw, 2.5rem);
-        @media (max-width:300px) {
+        @media (max-width:18.75rem) {
             font-size: clamp(1.2rem, 0.2rem + 0.008vw, 1.8rem);
         }
-        @media (min-width: 992px) {
+        @media (min-width: 62rem) {
             font-size: clamp(2rem, 4vw, 6rem);
             font-weight: 500;
             padding-block: 1vw;
