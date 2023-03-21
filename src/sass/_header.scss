@@ -26,7 +26,6 @@
     @media (min-width: 992px) {
         grid-template-columns: 30vw 50vw;
     }
-
     .header__logo-container {
         display: grid;
         align-items: center;
@@ -44,7 +43,6 @@
         display: none;
         color: var.$White;
     }
-
    
     .header__toggle {
         position: relative;
@@ -61,7 +59,6 @@
         @media (min-width: 992px) {
             display: none;
         }
-
 
         span {
             position: absolute;
@@ -162,25 +159,7 @@
             line-height: 2.5;
             cursor: pointer;
             position: relative;
-            &::after {
-                position: absolute;
-                content: "";
-                width: 0%;
-                height: 2px;
-                background-color: var.$White;
-                top:150%;
-                left: 25%;
-                transition: all 0.3s linear;
-            }
-          
-            @media (min-width: 992px) {
-                color: var.$White;
-                text-transform: capitalize;
-                position: relative;
-                &:hover::after {
-                    width: 50%;
-                }
-            }
+            @include mixin.nav_bottom-border();
             &:active {
                 color: var.$White;
                 -webkit-tap-highlight-color: transparent;

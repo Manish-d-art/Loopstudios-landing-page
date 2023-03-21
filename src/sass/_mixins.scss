@@ -6,3 +6,25 @@
     font-family: 'Josefin Sans', sans-serif;
     line-height: 1.2;
 }
+
+@mixin nav_bottom-border() {
+    &::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: var.$White;
+        top:150%;
+        left: 25%;
+        transition: all 0.3s linear;
+    }
+  
+    @media (min-width: 992px) {
+        color: var.$White;
+        text-transform: capitalize;
+        position: relative;
+        &:hover::after {
+            width: 50%;
+        }
+    }
+}
