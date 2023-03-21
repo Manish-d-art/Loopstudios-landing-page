@@ -72,7 +72,7 @@
         font-size: 2rem;
         @media(min-width: 632px) {
             font-size: 4rem;
-            margin-block-start: 15vh;
+            margin-block-start: 7rem;
             text-align: start;
             font-size: clamp(2.3rem, 0.9728rem + 3.36vw, 4rem);
         }
@@ -91,9 +91,14 @@
         }
         div {
             position: relative;
+            overflow: hidden;
             img, picture {
                 width: 100%;
                 display: block;
+                transition: .5s all ease;
+                &:hover {
+                    scale: 1.1;
+                }
             }
             h3 {
                 position: absolute;
