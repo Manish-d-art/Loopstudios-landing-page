@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [solution URL here](https://github.com/Manish-d-art/Loopstudios-landing-page)
-- Live Site URL: [live site URL here](https://loopstudios-webpage-mkm.netlify.app)
+- Live Site URL: [live site URL here](https://loopstudious-webpage-bymkm.netlify.app)
 
 ## My process
 
